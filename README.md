@@ -62,7 +62,7 @@ open_collection = Billplz::Collection.create_open_collection(title: "Billplz Tes
 
 **Create a bill**
 ```ruby
-bill = Billplz::Bill.create( collection_id: "ajij091j",email: "admin@billplz.com",name:"Admin BillPlz",amount: 200,callback_url: "billplz.com",description: "Shopping Items"
+bill = Billplz::Bill.create( collection_id: "ajij091j",email: "admin@billplz.com",name:"Admin BillPlz",amount: 200,callback_url: "billplz.com",description: "Shopping Items")
 ```
 
 **Get a bill**
