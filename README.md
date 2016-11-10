@@ -41,6 +41,12 @@ end
 ```ruby
 collection = Billplz::Collection.create(title: "Billplz Testing Collection")
 # {  "id": "inbmmepb", "title": "Billplz Testing Collection"}
+#get data from collection 
+collection.id # "inbmmepb"
+collection.title # "Billplz Testing Collection"
+#or 
+collection['id'] # "inbmmepb"
+collection['title'] # "Billplz Testing Collection"
 ```
 
 **Deactivate a collection**
