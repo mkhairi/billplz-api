@@ -28,7 +28,9 @@ You need to store your Billplz configuration setting in billplz.rb
 # config/initializers/billplz.rb
 Billplz.configure do |config|
   config.api_key = ENV['API_KEY_BILLPLZ']
-  config.api_url = ENV['API_URL_BILLPLZ']
+  config.api_url = ENV['API_URL_BILLPLZ'] 
+  #staging api url     https://billplz-staging.herokuapp.com 
+  #production api url  https://www.billplz.com/
 end
 ```
 
