@@ -52,6 +52,7 @@ collection = Billplz::Collection.activate(id: "alocpanfu")
 ```
 
 **Open Collection**
+
 **Create an open collection**
 ```
 collection = Billplz::Collection.create_open_collection(title: "Billplz Testing Collection",description: "Maecenas eu placerat ante. Fusce ut neque justo, et aliquet enim. In hac habitasse platea dictumst.", amount: 299)
