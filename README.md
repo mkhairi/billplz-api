@@ -76,6 +76,7 @@ bill = Billplz::Bill.delete(id: "arutnv89")
 ```
 
 **Registration Check**
+
 Enter bank account number
 ```
 registration_check = Billplz::RegistrationCheck.delete("123465782312")
