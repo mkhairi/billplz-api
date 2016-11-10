@@ -75,6 +75,11 @@ collection = Billplz::Bill.find(id: "arutnv89")
 collection = Billplz::Bill.delete(id: "arutnv89")
 ```
 
+**Registration Check**
+```
+Enter bank account number
+collection = Billplz::RegistrationCheck.delete("123465782312")
+```
 
 
 ## Contributing
