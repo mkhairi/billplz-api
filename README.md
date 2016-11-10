@@ -24,7 +24,7 @@ $ gem install billplz-api
 
 ##Configuration
 You need to store your Billplz configuration setting in billplz.rb
-```
+```ruby
 # config/initializers/billplz.rb
 Billplz.configure do |config|
   config.api_key = ENV['API_KEY_BILLPLZ']
