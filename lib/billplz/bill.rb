@@ -11,7 +11,7 @@ module Billplz
     private
 
     def set_base_url(name, request)
-      Flexirest::Base.base_url = "https://billplz-staging.herokuapp.com/api/v3/bills"
+      Flexirest::Base.base_url = "#{Billplz.configuration.api_url}/bills"
     end
 
     def replace_body(name, request)

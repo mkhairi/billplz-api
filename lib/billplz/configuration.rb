@@ -1,6 +1,6 @@
 module Billplz
   class Configuration
-    attr_accessor :api_key, :http_timeout, :mode
+    attr_accessor :api_key,:api_url, :http_timeout, :mode
 
     def initialize(options={})
       @http_timeout = 30
@@ -9,7 +9,7 @@ module Billplz
 
     def options
       hash = Hash.new
-      %w[api_key http_timeout mode].map{|key| hash[key.to_sym] = send(key) }
+      %w[api_key api_url http_timeout mode].map{|key| hash[key.to_sym] = send(key) }
       hash
     end
   end

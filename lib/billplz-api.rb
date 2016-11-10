@@ -8,6 +8,7 @@ require "billplz/configuration"
 require "billplz/model"
 require "billplz/bill"
 require "billplz/collection"
+require "billplz/registration_check"
 
 module Billplz
 end

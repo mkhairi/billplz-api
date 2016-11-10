@@ -4,11 +4,14 @@ module Billplz
     #before_request :replace_body
 
     post :create, ""
+    post :create_open_collection, "/open_collections"
+    post :deactivate, "collections/:id/deactivate"
+    post :activate, "collections/:id/activate"
 
     private
 
     def set_base_url(name, request)
-      Flexirest::Base.base_url = "https://billplz-staging.herokuapp.com/api/v3/collections"
+      Flexirest::Base.base_url = "#{Billplz.configuration.api_url}/"
     end
 
   end
