@@ -58,6 +58,21 @@ collection = Billplz::Collection.activate(id: "alocpanfu")
 collection = Billplz::Collection.create_open_collection(title: "Billplz Testing Collection",description: "Maecenas eu placerat ante. Fusce ut neque justo, et aliquet enim. In hac habitasse platea dictumst.", amount: 299)
 ```
 
+**Create a bill**
+```
+collection = Billplz::Bill.create( collection_id: "ajij091j",email: "admin@billplz.com",name:"Admin BillPlz",amount: 200,callback_url: "billplz.com",description: "Shopping Items"
+```
+
+**Get a bill**
+```
+collection = Billplz::Bill.find(id: "arutnv89")
+```
+
+**Delete a bill**
+```
+collection = Billplz::Bill.delete(id: "arutnv89")
+```
+
 
 
 ## Contributing
