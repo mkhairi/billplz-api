@@ -36,18 +36,18 @@ end
 **Collection**
 
 **Create a collection**
-```
+```ruby
 collection = Billplz::Collection.create(title: "Billplz Testing Collection")
 # {  "id": "inbmmepb", "title": "Billplz Testing Collection"}
 ```
 
 **Deactivate a collection**
-```
+```ruby
 collection = Billplz::Collection.deactivate(id: "alocpanfu")
 ```
 
 **Activate a collection**
-```
+```ruby
 collection = Billplz::Collection.activate(id: "alocpanfu")
 ```
 
@@ -61,24 +61,24 @@ open_collection = Billplz::Collection.create_open_collection(title: "Billplz Tes
 **Bill**
 
 **Create a bill**
-```
+```ruby
 bill = Billplz::Bill.create( collection_id: "ajij091j",email: "admin@billplz.com",name:"Admin BillPlz",amount: 200,callback_url: "billplz.com",description: "Shopping Items"
 ```
 
 **Get a bill**
-```
+```ruby
 bill = Billplz::Bill.find(id: "arutnv89")
 ```
 
 **Delete a bill**
-```
+```ruby
 bill = Billplz::Bill.delete(id: "arutnv89")
 ```
 
 **Registration Check**
 
 Enter bank account number
-```
+```ruby
 registration_check = Billplz::RegistrationCheck.delete("123465782312")
 ```
 
