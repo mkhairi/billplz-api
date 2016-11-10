@@ -33,14 +33,29 @@ end
 ```
 
 ##Usage
-Collection
+**Collection**
 
-Create a collection
+**Create a collection**
 ```
 collection = Billplz::Collection.create(title: "Billplz Testing Collection")
+# {  "id": "inbmmepb", "title": "Billplz Testing Collection"}
 ```
 
+**Deactivate a collection**
+```
+collection = Billplz::Collection.deactivate(id: "alocpanfu")
+```
 
+**Activate a collection**
+```
+collection = Billplz::Collection.activate(id: "alocpanfu")
+```
+
+**Open Collection**
+**Create an open collection**
+```
+collection = Billplz::Collection.create_open_collection(title: "Billplz Testing Collection",description: "Maecenas eu placerat ante. Fusce ut neque justo, et aliquet enim. In hac habitasse platea dictumst.", amount: 299)
+```
 
 
 
