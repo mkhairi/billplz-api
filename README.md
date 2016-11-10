@@ -86,6 +86,7 @@ registration_check = Billplz::RegistrationCheck.delete("123465782312")
 ## Contributing
 
 Bug reports and pull requests are welcome .
+
 1. Fork it
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
