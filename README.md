@@ -79,7 +79,7 @@ bill = Billplz::Bill.delete(id: "arutnv89")
 
 Enter bank account number
 ```ruby
-registration_check = Billplz::RegistrationCheck.delete("123465782312")
+registration_check = Billplz::RegistrationCheck.find("123465782312")
 ```
 
 
