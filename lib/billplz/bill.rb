@@ -5,7 +5,7 @@ module Billplz
     before_request :replace_body
 
     get :find, "/bills/:id"
-    get :transaction, "/bills/:id/transactions"
+    get :transactions, "/bills/:bill_id/transactions"
     post :create, "/bills"
     delete :delete, "/bills/:id"
 

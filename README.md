@@ -35,11 +35,13 @@ end
 ```
 
 ##Usage
-**Collection**
+###Collection
 
 **Find all collection**
 ```ruby
 collections = Billplz::Collection.all
+#or
+collections = Billplz::Collection.all(page: 1)
 ```
 
 **Create a collection**
@@ -64,11 +66,13 @@ collection = Billplz::Collection.deactivate(id: "alocpanfu")
 collection = Billplz::Collection.activate(id: "alocpanfu")
 ```
 
-**Open Collection**
+###Open Collection
 
 **Find all open collection**
 ```ruby
 open_collections = Billplz::OpenCollection.all
+#or 
+open_collections = Billplz::OpenCollection.all(page: 2)
 ```
 
 **Create an open collection**
@@ -81,7 +85,7 @@ open_collection = Billplz::OpenCollection.create(title: "Billplz Testing Collect
 open_collection = Billplz::OpenCollection.find(id: 0pp87t_6)
 ```
 
-**Bill**
+###Bill
 
 **Create a bill**
 ```ruby
@@ -100,14 +104,14 @@ bill = Billplz::Bill.delete(id: "arutnv89")
 
 **Get transactions of a bill**
 ```ruby
-bill = Billplz::Bill.find_transaction(id: "arutnv89")
+transactions = Billplz::Bill.transactions(bill_id: "arutnv89")
 ```
 
-**Registration Check**
+###Registration Check
 
 Enter bank account number
 ```ruby
-registration_check = Billplz::RegistrationCheck.find("123465782312")
+registration_check = Billplz::Registration.check(account_number: "123465782312")
 ```
 
 

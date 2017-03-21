@@ -9,7 +9,7 @@ require "billplz/model"
 require "billplz/bill"
 require "billplz/collection"
 require "billplz/open_collection"
-require "billplz/registration_check"
+require "billplz/registration"
 
 module Billplz
 end
