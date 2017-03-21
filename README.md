@@ -22,7 +22,7 @@ Or manually install
 $ gem install billplz-api
 ```
 
-##Configuration
+## Configuration
 You need to store your Billplz configuration setting in billplz.rb
 ```ruby
 # config/initializers/billplz.rb
@@ -34,8 +34,8 @@ Billplz.configure do |config|
 end
 ```
 
-##Usage
-###Collection
+## Usage
+### Collection
 
 **Find all collection**
 ```ruby
@@ -66,7 +66,7 @@ collection = Billplz::Collection.deactivate(id: "alocpanfu")
 collection = Billplz::Collection.activate(id: "alocpanfu")
 ```
 
-###Open Collection
+### Open Collection
 
 **Find all open collection**
 ```ruby
@@ -85,7 +85,7 @@ open_collection = Billplz::OpenCollection.create(title: "Billplz Testing Collect
 open_collection = Billplz::OpenCollection.find(id: 0pp87t_6)
 ```
 
-###Bill
+### Bill
 
 **Create a bill**
 ```ruby
@@ -107,7 +107,7 @@ bill = Billplz::Bill.delete(id: "arutnv89")
 transactions = Billplz::Bill.transactions(bill_id: "arutnv89")
 ```
 
-###Registration Check
+### Registration Check
 
 Enter bank account number
 ```ruby
