@@ -3,7 +3,7 @@ module Billplz
     perform_caching false
     #verbose!
     request_body_type :json
-
+    before_request :set_base_url
     before_request :replace_token_in_url
    
 
@@ -14,6 +14,9 @@ module Billplz
       request.headers["Authorization"] = auth
     end
 
+    def set_base_url(name, request)
+      Flexirest::Base.base_url = "#{Billplz.configuration.api_url}"
+    end
    
   end
 end

@@ -37,6 +37,11 @@ end
 ##Usage
 **Collection**
 
+**Find all collection**
+```ruby
+collections = Billplz::Collection.all
+```
+
 **Create a collection**
 ```ruby
 collection = Billplz::Collection.create(title: "Billplz Testing Collection")
@@ -61,9 +66,19 @@ collection = Billplz::Collection.activate(id: "alocpanfu")
 
 **Open Collection**
 
+**Find all open collection**
+```ruby
+open_collections = Billplz::OpenCollection.all
+```
+
 **Create an open collection**
 ```ruby
-open_collection = Billplz::Collection.create_open_collection(title: "Billplz Testing Collection", description: "Membayar Zakat merupakan kewajiban semua umat Islam bagi yang mampu.", amount: 299)
+open_collection = Billplz::OpenCollection.create(title: "Billplz Testing Collection", description: "Membayar Zakat merupakan kewajiban semua umat Islam bagi yang mampu.", amount: 299)
+```
+
+**Find an open collection**
+```ruby
+open_collection = Billplz::OpenCollection.find(id: 0pp87t_6)
 ```
 
 **Bill**
@@ -81,6 +96,11 @@ bill = Billplz::Bill.find(id: "arutnv89")
 **Delete a bill**
 ```ruby
 bill = Billplz::Bill.delete(id: "arutnv89")
+```
+
+**Get transactions of a bill**
+```ruby
+bill = Billplz::Bill.find_transaction(id: "arutnv89")
 ```
 
 **Registration Check**

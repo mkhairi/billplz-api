@@ -4,15 +4,12 @@ module Billplz
     before_request :set_base_url
     before_request :replace_body
 
-    get :find, "/:id"
-    post :create, ""
-    delete :delete, "/:id"
+    get :find, "/bills/:id"
+    get :transaction, "/bills/:id/transactions"
+    post :create, "/bills"
+    delete :delete, "/bills/:id"
 
     private
-
-    def set_base_url(name, request)
-      Flexirest::Base.base_url = "#{Billplz.configuration.api_url}/bills"
-    end
 
     def replace_body(name, request)
       if name == :create
