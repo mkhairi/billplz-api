@@ -24,11 +24,13 @@ $ gem install billplz-api
 
 ##Configuration
 You need to store your Billplz configuration setting in billplz.rb
-```
+```ruby
 # config/initializers/billplz.rb
 Billplz.configure do |config|
   config.api_key = ENV['API_KEY_BILLPLZ']
-  config.api_url = ENV['API_URL_BILLPLZ']
+  config.api_url = ENV['API_URL_BILLPLZ'] 
+  #staging api url     https://billplz-staging.herokuapp.com 
+  #production api url  https://www.billplz.com/
 end
 ```
 
@@ -39,6 +41,12 @@ end
 ```ruby
 collection = Billplz::Collection.create(title: "Billplz Testing Collection")
 # {  "id": "inbmmepb", "title": "Billplz Testing Collection"}
+#get data from collection 
+collection.id # "inbmmepb"
+collection.title # "Billplz Testing Collection"
+#or 
+collection['id'] # "inbmmepb"
+collection['title'] # "Billplz Testing Collection"
 ```
 
 **Deactivate a collection**
@@ -55,14 +63,14 @@ collection = Billplz::Collection.activate(id: "alocpanfu")
 
 **Create an open collection**
 ```ruby
-open_collection = Billplz::Collection.create_open_collection(title: "Billplz Testing Collection",description: "Maecenas eu placerat ante. Fusce ut neque justo, et aliquet enim. In hac habitasse platea dictumst.", amount: 299)
+open_collection = Billplz::Collection.create_open_collection(title: "Billplz Testing Collection", description: "Membayar Zakat merupakan kewajiban semua umat Islam bagi yang mampu.", amount: 299)
 ```
 
 **Bill**
 
 **Create a bill**
 ```ruby
-bill = Billplz::Bill.create( collection_id: "ajij091j",email: "admin@billplz.com",name:"Admin BillPlz",amount: 200,callback_url: "billplz.com",description: "Shopping Items")
+bill = Billplz::Bill.create(collection_id: "ajij091j", email: "admin@billplz.com", name:"Admin BillPlz", amount: 200, callback_url: "billplz.com", description: "Shopping Items")
 ```
 
 **Get a bill**
