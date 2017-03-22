@@ -46,7 +46,7 @@ collections = Billplz::Collection.all(page: 1)
 
 **Get a collection**
 ```ruby
-collection = Billplz::Collection.find(id: 0pp87t_6)
+collection = Billplz::Collection.find(id: "0pp87t_6")
 ```
 
 **Create a collection**
@@ -87,7 +87,7 @@ open_collection = Billplz::OpenCollection.create(title: "Billplz Testing Collect
 
 **Get an open collection**
 ```ruby
-open_collection = Billplz::OpenCollection.find(id: 0pp87t_6)
+open_collection = Billplz::OpenCollection.find(id: "0pp87t_6")
 ```
 
 ### Bill
