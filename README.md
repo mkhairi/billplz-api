@@ -44,6 +44,11 @@ collections = Billplz::Collection.all
 collections = Billplz::Collection.all(page: 1)
 ```
 
+**Find a collection**
+```ruby
+open_collection = Billplz::Collection.find(id: 0pp87t_6)
+```
+
 **Create a collection**
 ```ruby
 collection = Billplz::Collection.create(title: "Billplz Testing Collection")
@@ -92,7 +97,7 @@ open_collection = Billplz::OpenCollection.find(id: 0pp87t_6)
 bill = Billplz::Bill.create(collection_id: "ajij091j", email: "admin@billplz.com", name:"Admin BillPlz", amount: 200, callback_url: "billplz.com", description: "Shopping Items")
 ```
 
-**Get a bill**
+**Find a bill**
 ```ruby
 bill = Billplz::Bill.find(id: "arutnv89")
 ```
