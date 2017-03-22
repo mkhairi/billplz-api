@@ -37,16 +37,16 @@ end
 ## Usage
 ### Collection
 
-**Find all collection**
+**Get collections**
 ```ruby
 collections = Billplz::Collection.all
 #or
 collections = Billplz::Collection.all(page: 1)
 ```
 
-**Find a collection**
+**Get a collection**
 ```ruby
-open_collection = Billplz::Collection.find(id: 0pp87t_6)
+collection = Billplz::Collection.find(id: 0pp87t_6)
 ```
 
 **Create a collection**
@@ -73,7 +73,7 @@ collection = Billplz::Collection.activate(id: "alocpanfu")
 
 ### Open Collection
 
-**Find all open collection**
+**Get open collections**
 ```ruby
 open_collections = Billplz::OpenCollection.all
 #or 
@@ -85,7 +85,7 @@ open_collections = Billplz::OpenCollection.all(page: 2)
 open_collection = Billplz::OpenCollection.create(title: "Billplz Testing Collection", description: "Membayar Zakat merupakan kewajiban semua umat Islam bagi yang mampu.", amount: 299)
 ```
 
-**Find an open collection**
+**Get an open collection**
 ```ruby
 open_collection = Billplz::OpenCollection.find(id: 0pp87t_6)
 ```
