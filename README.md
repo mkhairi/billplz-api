@@ -1,4 +1,4 @@
-# Billplz
+# Billplz [![Gem Version](https://badge.fury.io/rb/billplz-api.svg)](http://badge.fury.io/rb/billplz-api)
 
 [Billplz-API](https://www.billplz.com/api) Client API for ruby
 
